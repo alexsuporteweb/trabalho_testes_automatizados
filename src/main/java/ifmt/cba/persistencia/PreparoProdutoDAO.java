@@ -3,13 +3,14 @@ package ifmt.cba.persistencia;
 import java.util.List;
 
 import ifmt.cba.entity.PreparoProduto;
-import ifmt.cba.entity.Produto;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
+import jakarta.persistence.NonUniqueResultException;
 import jakarta.persistence.Query;
 
 public class PreparoProdutoDAO extends DAO<PreparoProduto> {
 
-    public PreparoProdutoDAO(EntityManager entityManager) throws PersistenciaException {
+	public PreparoProdutoDAO(EntityManager entityManager) throws PersistenciaException {
 		super(entityManager);
 	}
 
@@ -53,7 +54,7 @@ public class PreparoProdutoDAO extends DAO<PreparoProduto> {
 		return listaPreparoProduto;
 	}
 
-    @SuppressWarnings("unchecked")
+	@SuppressWarnings("unchecked")
 	public List<PreparoProduto> buscarPorTipoPreparo(int codigoTipoPreparo) throws PersistenciaException {
 		List<PreparoProduto> listaPreparoProduto;
 		try {
@@ -71,11 +72,15 @@ public class PreparoProdutoDAO extends DAO<PreparoProduto> {
 		PreparoProduto preparoProduto;
 		try {
 			Query query = this.entityManager
-					.createQuery("SELECT pp FROM PreparoProduto pp WHERE pp.produto.codigo = :codproduto AND pp.tipoPreparo.codigo = :codtipo");
+					.createQuery(
+							"SELECT pp FROM PreparoProduto pp WHERE pp.produto.codigo = :codproduto AND pp.tipoPreparo.codigo = :codtipo");
 			query.setParameter("codproduto", codigoProduto);
-            query.setParameter("codtipo", codigoTipoPreparo);
+			query.setParameter("codtipo", codigoTipoPreparo);
 			preparoProduto = (PreparoProduto) query.getSingleResult();
+		} catch (NoResultException | NonUniqueResultException ex) {
+			preparoProduto = null;
 		} catch (Exception ex) {
+			preparoProduto = null;
 			throw new PersistenciaException("Erro na selecao por produto e tipo preparo - " + ex.getMessage());
 		}
 		return preparoProduto;

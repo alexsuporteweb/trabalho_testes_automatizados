@@ -4,13 +4,15 @@ import java.util.List;
 
 import ifmt.cba.entity.Entregador;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
+import jakarta.persistence.NonUniqueResultException;
 import jakarta.persistence.Query;
 
-public class EntregadorDAO extends DAO<Entregador>{
-    
+public class EntregadorDAO extends DAO<Entregador> {
+
     public EntregadorDAO(EntityManager entityManager) throws PersistenciaException {
-		super(entityManager);
-	}
+        super(entityManager);
+    }
 
     public Entregador buscarPorCodigo(int codigo) throws PersistenciaException {
 
@@ -25,13 +27,16 @@ public class EntregadorDAO extends DAO<Entregador>{
     }
 
     public Entregador buscarPorCPF(String CPF) throws PersistenciaException {
-        Entregador entregador = null;
+        Entregador entregador;
         try {
             Query query = this.entityManager
                     .createQuery("SELECT e FROM Entregador e WHERE UPPER(e.CPF) = :pCPF");
             query.setParameter("pCPF", CPF.toUpperCase().trim());
             entregador = (Entregador) query.getSingleResult();
+        } catch (NoResultException | NonUniqueResultException ex) {
+            entregador = null;
         } catch (Exception ex) {
+            entregador = null;
             throw new PersistenciaException("Erro na selecao por CPF - " + ex.getMessage());
         }
         return entregador;

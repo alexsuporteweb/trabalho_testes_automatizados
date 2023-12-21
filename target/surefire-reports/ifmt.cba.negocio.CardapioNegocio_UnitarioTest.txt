@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: ifmt.cba.negocio.CardapioNegocio_UnitarioTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.202 s <<< FAILURE! -- in ifmt.cba.negocio.CardapioNegocio_UnitarioTest
+ifmt.cba.negocio.CardapioNegocio_UnitarioTest.validarOperacaodeInclusaoCardapioComMock -- Time elapsed: 0.198 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: ifmt.cba.negocio.NegocioException: Descricao invalidaCardapio sem itens
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3164)
+	at ifmt.cba.negocio.CardapioNegocio_UnitarioTest.validarOperacaodeInclusaoCardapioComMock(CardapioNegocio_UnitarioTest.java:26)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: ifmt.cba.negocio.NegocioException: Descricao invalidaCardapio sem itens
+	at ifmt.cba.negocio.CardapioNegocio.inserir(CardapioNegocio.java:28)
+	at ifmt.cba.negocio.CardapioNegocio_UnitarioTest.lambda$validarOperacaodeInclusaoCardapioComMock$1(CardapioNegocio_UnitarioTest.java:26)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+

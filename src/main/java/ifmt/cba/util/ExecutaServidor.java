@@ -9,7 +9,7 @@ public class ExecutaServidor {
     public static void main(String[] args) throws IOException {
         HttpServer servidor = ServidorHTTP.getServerHTTP();
         System.out.println("-------------------------------------------------------------------r");
-        System.out.println("Web Services Restaurante - Presseione qualquer tecla para encerrar");
+        System.out.println("Web Services Restaurante - Pressione qualquer tecla para encerrar");
         // espera uma tecla se pressionada
         System.in.read();
         servidor.shutdownNow();

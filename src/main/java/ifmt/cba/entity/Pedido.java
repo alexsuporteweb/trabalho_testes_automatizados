@@ -204,7 +204,7 @@ public class Pedido {
             }
         }
 
-        if (this.listaItens == null || this.listaItens.isEmpty()) {
+        if (this.listaItens == null || this.listaItens.size() == 0) {
             retorno += "Pedido sem itens";
         }
 

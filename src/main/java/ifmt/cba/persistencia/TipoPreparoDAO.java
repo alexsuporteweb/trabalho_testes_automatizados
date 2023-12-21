@@ -3,11 +3,13 @@ package ifmt.cba.persistencia;
 import java.util.List;
 import ifmt.cba.entity.TipoPreparo;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
+import jakarta.persistence.NonUniqueResultException;
 import jakarta.persistence.Query;
 
-public class TipoPreparoDAO extends DAO<TipoPreparo>{
+public class TipoPreparoDAO extends DAO<TipoPreparo> {
 
-    public TipoPreparoDAO(EntityManager entityManager) throws PersistenciaException {
+	public TipoPreparoDAO(EntityManager entityManager) throws PersistenciaException {
 		super(entityManager);
 	}
 
@@ -24,13 +26,16 @@ public class TipoPreparoDAO extends DAO<TipoPreparo>{
 	}
 
 	public TipoPreparo buscarPorDescricao(String descricao) throws PersistenciaException {
-		TipoPreparo tipoPreparo = null;
+		TipoPreparo tipoPreparo;
 		try {
 			Query query = this.entityManager
 					.createQuery("SELECT tp FROM TipoPreparo tp WHERE UPPER(tp.descricao) = :pDesc");
 			query.setParameter("pDesc", descricao.toUpperCase().trim());
 			tipoPreparo = (TipoPreparo) query.getSingleResult();
+		} catch (NoResultException | NonUniqueResultException ex) {
+			tipoPreparo = null;
 		} catch (Exception ex) {
+			tipoPreparo = null;
 			throw new PersistenciaException("Erro na selecao por descricao - " + ex.getMessage());
 		}
 		return tipoPreparo;
@@ -41,7 +46,8 @@ public class TipoPreparoDAO extends DAO<TipoPreparo>{
 		List<TipoPreparo> listaGrupoAlimentar;
 		try {
 			Query query = this.entityManager
-					.createQuery("SELECT tp FROM TipoPreparo tp WHERE UPPER(tp.descricao) LIKE :pDesc ORDER BY tp.descricao");
+					.createQuery(
+							"SELECT tp FROM TipoPreparo tp WHERE UPPER(tp.descricao) LIKE :pDesc ORDER BY tp.descricao");
 			query.setParameter("pDesc", "%" + descricao.toUpperCase().trim() + "%");
 			listaGrupoAlimentar = query.getResultList();
 		} catch (Exception ex) {

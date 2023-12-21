@@ -11,7 +11,7 @@ import ifmt.cba.persistencia.CardapioDAO;
 import ifmt.cba.persistencia.PersistenciaException;
 
 public class CardapioNegocio {
-    private ModelMapper modelMapper;
+	private ModelMapper modelMapper;
 	private CardapioDAO cardapioDAO;
 
 	public CardapioNegocio(CardapioDAO cardapioDAO) {
@@ -32,7 +32,7 @@ public class CardapioNegocio {
 			if (cardapioDAO.buscarPorNome(cardapio.getNome()) != null) {
 				throw new NegocioException("Ja existe esse cardapio");
 			}
-			
+
 			cardapioDAO.beginTransaction();
 			cardapioDAO.incluir(cardapio);
 			cardapioDAO.commitTransaction();

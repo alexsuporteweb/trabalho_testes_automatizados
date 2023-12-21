@@ -4,6 +4,8 @@ import java.util.List;
 
 import ifmt.cba.entity.Cliente;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
+import jakarta.persistence.NonUniqueResultException;
 import jakarta.persistence.Query;
 
 public class ClienteDAO extends DAO<Cliente> {
@@ -25,13 +27,16 @@ public class ClienteDAO extends DAO<Cliente> {
     }
 
     public Cliente buscarPorCPF(String CPF) throws PersistenciaException {
-        Cliente cliente = null;
+        Cliente cliente;
         try {
             Query query = this.entityManager
                     .createQuery("SELECT c FROM Cliente c WHERE UPPER(c.CPF) = :pCPF");
             query.setParameter("pCPF", CPF.toUpperCase().trim());
             cliente = (Cliente) query.getSingleResult();
+        } catch (NoResultException | NonUniqueResultException ex) {
+            cliente = null;
         } catch (Exception ex) {
+            cliente = null;
             throw new PersistenciaException("Erro na selecao por CPF - " + ex.getMessage());
         }
         return cliente;
