@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest" time="3.432" tests="3" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="c:\Users\wdson\Downloads\restaurante-base (1)\restaurante-base\target\test-classes;c:\Users\wdson\Downloads\restaurante-base (1)\restaurante-base\target\classes;C:\Users\wdson\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\wdson\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\wdson\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\wdson\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\wdson\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\wdson\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\wdson\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\wdson\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\wdson\.m2\repository\io\rest-assured\rest-assured\5.3.1\rest-assured-5.3.1.jar;C:\Users\wdson\.m2\repository\org\apache\groovy\groovy\4.0.11\groovy-4.0.11.jar;C:\Users\wdson\.m2\repository\org\apache\groovy\groovy-xml\4.0.11\groovy-xml-4.0.11.jar;C:\Users\wdson\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\wdson\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\wdson\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\wdson\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\wdson\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\wdson\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\wdson\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\wdson\.m2\repository\io\rest-assured\json-path\5.3.1\json-path-5.3.1.jar;C:\Users\wdson\.m2\repository\org\apache\groovy\groovy-json\4.0.11\groovy-json-4.0.11.jar;C:\Users\wdson\.m2\repository\io\rest-assured\rest-assured-common\5.3.1\rest-assured-common-5.3.1.jar;C:\Users\wdson\.m2\repository\io\rest-assured\xml-path\5.3.1\xml-path-5.3.1.jar;C:\Users\wdson\.m2\repository\org\modelmapper\modelmapper\3.1.1\modelmapper-3.1.1.jar;C:\Users\wdson\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\wdson\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\wdson\.m2\repository\org\postgresql\postgresql\42.6.0\postgresql-42.6.0.jar;C:\Users\wdson\.m2\repository\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\wdson\.m2\repository\org\hibernate\orm\hibernate-core\6.2.1.Final\hibernate-core-6.2.1.Final.jar;C:\Users\wdson\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\wdson\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\wdson\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\wdson\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\wdson\.m2\repository\io\smallrye\jandex\3.0.5\jandex-3.0.5.jar;C:\Users\wdson\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\wdson\.m2\repository\net\bytebuddy\byte-buddy\1.12.18\byte-buddy-1.12.18.jar;C:\Users\wdson\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\wdson\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\wdson\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\wdson\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\wdson\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\wdson\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\wdson\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\containers\jersey-container-grizzly2-http\3.1.1\jersey-container-grizzly2-http-3.1.1.jar;C:\Users\wdson\.m2\repository\org\glassfish\grizzly\grizzly-http-server\4.0.0\grizzly-http-server-4.0.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\grizzly\grizzly-http\4.0.0\grizzly-http-4.0.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\grizzly\grizzly-framework\4.0.0\grizzly-framework-4.0.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\core\jersey-common\3.1.1\jersey-common-3.1.1.jar;C:\Users\wdson\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\wdson\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.3\osgi-resource-locator-1.0.3.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\core\jersey-server\3.1.1\jersey-server-3.1.1.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\core\jersey-client\3.1.1\jersey-client-3.1.1.jar;C:\Users\wdson\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\wdson\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.1.0\jakarta.ws.rs-api-3.1.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\inject\jersey-hk2\3.1.1\jersey-hk2-3.1.1.jar;C:\Users\wdson\.m2\repository\org\glassfish\hk2\hk2-locator\3.0.3\hk2-locator-3.0.3.jar;C:\Users\wdson\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\3.0.3\aopalliance-repackaged-3.0.3.jar;C:\Users\wdson\.m2\repository\org\glassfish\hk2\hk2-api\3.0.3\hk2-api-3.0.3.jar;C:\Users\wdson\.m2\repository\org\glassfish\hk2\hk2-utils\3.0.3\hk2-utils-3.0.3.jar;C:\Users\wdson\.m2\repository\org\javassist\javassist\3.29.0-GA\javassist-3.29.0-GA.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\media\jersey-media-json-binding\3.1.1\jersey-media-json-binding-3.1.1.jar;C:\Users\wdson\.m2\repository\jakarta\json\jakarta.json-api\2.1.1\jakarta.json-api-2.1.1.jar;C:\Users\wdson\.m2\repository\jakarta\json\bind\jakarta.json.bind-api\3.0.0\jakarta.json.bind-api-3.0.0.jar;C:\Users\wdson\.m2\repository\org\eclipse\parsson\parsson\1.1.1\parsson-1.1.1.jar;C:\Users\wdson\.m2\repository\org\eclipse\yasson\3.0.2\yasson-3.0.2.jar;C:\Users\wdson\.m2\repository\org\mockito\mockito-junit-jupiter\5.6.0\mockito-junit-jupiter-5.6.0.jar;C:\Users\wdson\.m2\repository\org\mockito\mockito-core\5.6.0\mockito-core-5.6.0.jar;C:\Users\wdson\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.8\byte-buddy-agent-1.14.8.jar;C:\Users\wdson\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Cuiaba"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
+    <property name="sun.java.command" value="C:\Users\wdson\AppData\Local\Temp\surefire1529899718155397274\surefirebooter-20231218084300272_3.jar C:\Users\wdson\AppData\Local\Temp\surefire1529899718155397274 2023-12-18T08-42-59_506-jvmRun1 surefire-20231218084300272_1tmp surefire_0-20231218084300272_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="c:\Users\wdson\Downloads\restaurante-base (1)\restaurante-base\target\test-classes;c:\Users\wdson\Downloads\restaurante-base (1)\restaurante-base\target\classes;C:\Users\wdson\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\wdson\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\wdson\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\wdson\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\wdson\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\wdson\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\wdson\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\wdson\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\wdson\.m2\repository\io\rest-assured\rest-assured\5.3.1\rest-assured-5.3.1.jar;C:\Users\wdson\.m2\repository\org\apache\groovy\groovy\4.0.11\groovy-4.0.11.jar;C:\Users\wdson\.m2\repository\org\apache\groovy\groovy-xml\4.0.11\groovy-xml-4.0.11.jar;C:\Users\wdson\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\wdson\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\wdson\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\wdson\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\wdson\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\wdson\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\wdson\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\wdson\.m2\repository\io\rest-assured\json-path\5.3.1\json-path-5.3.1.jar;C:\Users\wdson\.m2\repository\org\apache\groovy\groovy-json\4.0.11\groovy-json-4.0.11.jar;C:\Users\wdson\.m2\repository\io\rest-assured\rest-assured-common\5.3.1\rest-assured-common-5.3.1.jar;C:\Users\wdson\.m2\repository\io\rest-assured\xml-path\5.3.1\xml-path-5.3.1.jar;C:\Users\wdson\.m2\repository\org\modelmapper\modelmapper\3.1.1\modelmapper-3.1.1.jar;C:\Users\wdson\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\wdson\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\wdson\.m2\repository\org\postgresql\postgresql\42.6.0\postgresql-42.6.0.jar;C:\Users\wdson\.m2\repository\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\wdson\.m2\repository\org\hibernate\orm\hibernate-core\6.2.1.Final\hibernate-core-6.2.1.Final.jar;C:\Users\wdson\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\wdson\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\wdson\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\wdson\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\wdson\.m2\repository\io\smallrye\jandex\3.0.5\jandex-3.0.5.jar;C:\Users\wdson\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\wdson\.m2\repository\net\bytebuddy\byte-buddy\1.12.18\byte-buddy-1.12.18.jar;C:\Users\wdson\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\wdson\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\wdson\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\wdson\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\wdson\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\wdson\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\wdson\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\containers\jersey-container-grizzly2-http\3.1.1\jersey-container-grizzly2-http-3.1.1.jar;C:\Users\wdson\.m2\repository\org\glassfish\grizzly\grizzly-http-server\4.0.0\grizzly-http-server-4.0.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\grizzly\grizzly-http\4.0.0\grizzly-http-4.0.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\grizzly\grizzly-framework\4.0.0\grizzly-framework-4.0.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\core\jersey-common\3.1.1\jersey-common-3.1.1.jar;C:\Users\wdson\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\wdson\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.3\osgi-resource-locator-1.0.3.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\core\jersey-server\3.1.1\jersey-server-3.1.1.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\core\jersey-client\3.1.1\jersey-client-3.1.1.jar;C:\Users\wdson\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\wdson\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.1.0\jakarta.ws.rs-api-3.1.0.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\inject\jersey-hk2\3.1.1\jersey-hk2-3.1.1.jar;C:\Users\wdson\.m2\repository\org\glassfish\hk2\hk2-locator\3.0.3\hk2-locator-3.0.3.jar;C:\Users\wdson\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\3.0.3\aopalliance-repackaged-3.0.3.jar;C:\Users\wdson\.m2\repository\org\glassfish\hk2\hk2-api\3.0.3\hk2-api-3.0.3.jar;C:\Users\wdson\.m2\repository\org\glassfish\hk2\hk2-utils\3.0.3\hk2-utils-3.0.3.jar;C:\Users\wdson\.m2\repository\org\javassist\javassist\3.29.0-GA\javassist-3.29.0-GA.jar;C:\Users\wdson\.m2\repository\org\glassfish\jersey\media\jersey-media-json-binding\3.1.1\jersey-media-json-binding-3.1.1.jar;C:\Users\wdson\.m2\repository\jakarta\json\jakarta.json-api\2.1.1\jakarta.json-api-2.1.1.jar;C:\Users\wdson\.m2\repository\jakarta\json\bind\jakarta.json.bind-api\3.0.0\jakarta.json.bind-api-3.0.0.jar;C:\Users\wdson\.m2\repository\org\eclipse\parsson\parsson\1.1.1\parsson-1.1.1.jar;C:\Users\wdson\.m2\repository\org\eclipse\yasson\3.0.2\yasson-3.0.2.jar;C:\Users\wdson\.m2\repository\org\mockito\mockito-junit-jupiter\5.6.0\mockito-junit-jupiter-5.6.0.jar;C:\Users\wdson\.m2\repository\org\mockito\mockito-core\5.6.0\mockito-core-5.6.0.jar;C:\Users\wdson\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.8\byte-buddy-agent-1.14.8.jar;C:\Users\wdson\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\wdson"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="c:\Users\wdson\Downloads\restaurante-base (1)\restaurante-base"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\wdson\AppData\Local\Temp\surefire1529899718155397274\surefirebooter-20231218084300272_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="19.0.2+7-44"/>
+    <property name="user.name" value="wdson"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\wdson\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\wdson\AppData\Local\Temp\"/>
+    <property name="java.version" value="19.0.2"/>
+    <property name="user.dir" value="c:\Users\wdson\Downloads\restaurante-base (1)\restaurante-base"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\WindowsApps\Microsoft.PowerShell_7.4.0.0_x64__8wekyb3d8bbwe;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\laragon\bin\php\php-8.1.10-Win32-vs16-x64;C:\composer;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\wdson\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\wdson\AppData\Local\Programs\Python\Python311\;C:\Users\wdson\AppData\Local\Microsoft\WindowsApps;;C:\Users\wdson\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.3\bin;;C:\Users\wdson\AppData\Roaming\npm;C:\Users\wdson\AppData\Roaming\Composer\vendor\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="19.0.2+7-44"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="inserirEntregador" classname="ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest" time="3.413">
+    <system-out><![CDATA[Hibernate: 
+    create table cardapio (
+        codigo serial not null,
+        descricao varchar(255),
+        nome varchar(255),
+        primary key (codigo)
+    )
+Hibernate: 
+    create table cardapio_preparo_produto (
+        Cardapio_codigo integer not null,
+        listaPreparoProduto_codigo integer not null unique
+    )
+Hibernate: 
+    create table cliente (
+        codigo serial not null,
+        bairro varchar(255) not null,
+        cpf varchar(255) not null,
+        logradouro varchar(255) not null,
+        nome varchar(255) not null,
+        numero varchar(255) not null,
+        referencia varchar(255) not null,
+        rg varchar(255) not null,
+        telefone varchar(255) not null,
+        primary key (codigo)
+    )
+Hibernate: 
+    create table colaborador (
+        codigo serial not null,
+        cpf varchar(255),
+        nome varchar(255),
+        rg varchar(255),
+        telefone varchar(255),
+        primary key (codigo)
+    )
+Hibernate: 
+    create table entregador (
+        codigo serial not null,
+        cpf varchar(255),
+        nome varchar(255),
+        rg varchar(255),
+        telefone varchar(255),
+        primary key (codigo)
+    )
+Hibernate: 
+    create table grupo_alimentar (
+        codigo serial not null,
+        nome varchar(40),
+        primary key (codigo)
+    )
+Hibernate: 
+    create table item_ordem_producao (
+        codigo serial not null,
+        id_ordem integer,
+        id_preparo integer,
+        qtde_porcao integer,
+        primary key (codigo)
+    )
+Hibernate: 
+    create table item_pedido (
+        codigo serial not null,
+        id_pedido integer,
+        id_preparo integer,
+        qtde_porcao integer,
+        primary key (codigo)
+    )
+Hibernate: 
+    create table ordem_producao (
+        cardapio_codigo integer,
+        codigo serial not null,
+        dataProducao date,
+        estado varchar(255) check (estado in ('REGISTRADA','PROCESSADA')),
+        primary key (codigo)
+    )
+Hibernate: 
+    create table pedido (
+        cliente_codigo integer,
+        codigo serial not null,
+        data_pedido date,
+        entregador integer,
+        hora_entrega time(6),
+        hora_finalizado time(6),
+        hora_pedido time(6),
+        hora_producao time(6),
+        hora_pronto time(6),
+        estado varchar(255) check (estado in ('REGISTRADO','PRODUCAO','PRONTO','ENTREGA','CONCLUIDO')),
+        primary key (codigo)
+    )
+Hibernate: 
+    create table preparo_produto (
+        codigo serial not null,
+        id_tipo_preparo integer,
+        produto integer,
+        tempo_preparo integer,
+        valor_preparo float4,
+        nome varchar(40) not null,
+        primary key (codigo)
+    )
+Hibernate: 
+    create table produto (
+        codigo serial not null,
+        custo_unidade float4,
+        estoque integer,
+        estoque_minimo integer,
+        id_grupo integer,
+        valor_energetico integer,
+        nome varchar(255),
+        primary key (codigo)
+    )
+Hibernate: 
+    create table tipo_preparo (
+        codigo serial not null,
+        descricao varchar(255),
+        primary key (codigo)
+    )
+Hibernate: 
+    alter table if exists cardapio_preparo_produto 
+       add constraint FKtioj81extjmc0qkoxb40jaxhh 
+       foreign key (listaPreparoProduto_codigo) 
+       references preparo_produto
+Hibernate: 
+    alter table if exists cardapio_preparo_produto 
+       add constraint FKgcgbd6slrhuhunv9wm3bidre2 
+       foreign key (Cardapio_codigo) 
+       references cardapio
+Hibernate: 
+    alter table if exists item_ordem_producao 
+       add constraint FKclon8gmuu9hcnyc0caubkurwq 
+       foreign key (id_preparo) 
+       references preparo_produto
+Hibernate: 
+    alter table if exists item_ordem_producao 
+       add constraint FKp7ln1mbjmk56phn32g6famr64 
+       foreign key (id_ordem) 
+       references ordem_producao
+Hibernate: 
+    alter table if exists item_pedido 
+       add constraint FK69catbm4vh60h1ho1ujl27l1s 
+       foreign key (id_preparo) 
+       references preparo_produto
+Hibernate: 
+    alter table if exists item_pedido 
+       add constraint FKnjghutiejefh2auj9bnpf9sp7 
+       foreign key (id_pedido) 
+       references pedido
+Hibernate: 
+    alter table if exists ordem_producao 
+       add constraint FK9tk2tnrkjhwhiq50yu4wx1y1d 
+       foreign key (cardapio_codigo) 
+       references cardapio
+Hibernate: 
+    alter table if exists pedido 
+       add constraint FKily4j6ymnwg9wiff282uv17wl 
+       foreign key (cliente_codigo) 
+       references cliente
+Hibernate: 
+    alter table if exists pedido 
+       add constraint FKn0by3o68mfwfhfitjr9k9jopo 
+       foreign key (entregador) 
+       references entregador
+Hibernate: 
+    alter table if exists preparo_produto 
+       add constraint FKbjw408v6vis5b1xhif1c7btcx 
+       foreign key (produto) 
+       references produto
+Hibernate: 
+    alter table if exists preparo_produto 
+       add constraint FKig5n2ae7deq8gu23ij5c5vep9 
+       foreign key (id_tipo_preparo) 
+       references tipo_preparo
+Hibernate: 
+    alter table if exists produto 
+       add constraint FK21di9cb8brmc8wkq8yyt2ttco 
+       foreign key (id_grupo) 
+       references grupo_alimentar
+Hibernate: 
+    select
+        e1_0.codigo,
+        e1_0.cpf,
+        e1_0.rg,
+        e1_0.nome,
+        e1_0.telefone 
+    from
+        entregador e1_0 
+    where
+        upper(e1_0.cpf)=?
+Hibernate: 
+    insert 
+    into
+        entregador
+        (cpf,rg,nome,telefone) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    select
+        e1_0.codigo,
+        e1_0.cpf,
+        e1_0.rg,
+        e1_0.nome,
+        e1_0.telefone 
+    from
+        entregador e1_0 
+    where
+        upper(e1_0.nome) like ? escape '' 
+    order by
+        e1_0.nome
+]]></system-out>
+    <system-err><![CDATA[dez. 18, 2023 8:43:03 AM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+INFO: HHH000204: Processing PersistenceUnitInfo [name: restaurante_teste]
+dez. 18, 2023 8:43:03 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 6.2.1.Final
+dez. 18, 2023 8:43:03 AM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000406: Using bytecode reflection optimizer
+dez. 18, 2023 8:43:03 AM org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl lambda$normalizeConnectionAccessUserAndPass$6
+WARN: HHH90000021: Encountered deprecated setting [javax.persistence.jdbc.user], use [jakarta.persistence.jdbc.user] instead
+dez. 18, 2023 8:43:03 AM org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl lambda$normalizeConnectionAccessUserAndPass$12
+WARN: HHH90000021: Encountered deprecated setting [javax.persistence.jdbc.password], use [jakarta.persistence.jdbc.password] instead
+dez. 18, 2023 8:43:03 AM org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl normalizeDataAccess
+WARN: HHH90000021: Encountered deprecated setting [javax.persistence.jdbc.url], use [jakarta.persistence.jdbc.url] instead
+dez. 18, 2023 8:43:03 AM org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl normalizeDataAccess
+WARN: HHH90000021: Encountered deprecated setting [javax.persistence.jdbc.driver], use [jakarta.persistence.jdbc.driver] instead
+dez. 18, 2023 8:43:03 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using built-in connection pool (not intended for production use)
+dez. 18, 2023 8:43:03 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: Loaded JDBC driver class: org.h2.Driver
+dez. 18, 2023 8:43:03 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001012: Connecting with JDBC URL [jdbc:h2:mem:restaurante_teste]
+dez. 18, 2023 8:43:03 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {password=****, user=sa}
+dez. 18, 2023 8:43:03 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+dez. 18, 2023 8:43:03 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH10001115: Connection pool size: 20 (min=1)
+dez. 18, 2023 8:43:03 AM org.hibernate.dialect.Dialect checkVersion
+WARN: HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 10.0.0. Check the community dialects project for available legacy versions.
+dez. 18, 2023 8:43:03 AM org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl logSelectedDialect
+INFO: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@523a7801
+dez. 18, 2023 8:43:04 AM org.hibernate.bytecode.internal.BytecodeProviderInitiator buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : bytebuddy
+dez. 18, 2023 8:43:04 AM org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator$ActionGrouping determineJpaDbActionSetting
+WARN: HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.database.action], use [jakarta.persistence.schema-generation.database.action] instead
+dez. 18, 2023 8:43:05 AM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+dez. 18, 2023 8:43:05 AM org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator$ActionGrouping determineJpaDbActionSetting
+WARN: HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.database.action], use [jakarta.persistence.schema-generation.database.action] instead
+dez. 18, 2023 8:43:05 AM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2f0e7fa8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+dez. 18, 2023 8:43:05 AM org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase beforeScript
+INFO: HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+]]></system-err>
+  </testcase>
+  <testcase name="exclusaoEntregador" classname="ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest" time="0.019">
+    <failure message="Unexpected exception thrown: ifmt.cba.negocio.NegocioException: Ja existe esse entregador" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: ifmt.cba.negocio.NegocioException: Ja existe esse entregador
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3164)
+	at ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest.exclusaoEntregador(EntregadorNegocio_EntregadorDAO_IntegracaoTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: ifmt.cba.negocio.NegocioException: Ja existe esse entregador
+	at ifmt.cba.negocio.EntregadorNegocio.inserir(EntregadorNegocio.java:33)
+	at ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest.lambda$exclusaoEntregador$10(EntregadorNegocio_EntregadorDAO_IntegracaoTest.java:64)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+]]></failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        e1_0.codigo,
+        e1_0.cpf,
+        e1_0.rg,
+        e1_0.nome,
+        e1_0.telefone 
+    from
+        entregador e1_0 
+    where
+        upper(e1_0.cpf)=?
+]]></system-out>
+  </testcase>
+  <testcase name="listarPorParteDeNome" classname="ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest" time="0.0">
+    <failure message="Unexpected exception thrown: ifmt.cba.negocio.NegocioException: Ja existe esse entregador" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: ifmt.cba.negocio.NegocioException: Ja existe esse entregador
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3164)
+	at ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest.listarPorParteDeNome(EntregadorNegocio_EntregadorDAO_IntegracaoTest.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: ifmt.cba.negocio.NegocioException: Ja existe esse entregador
+	at ifmt.cba.negocio.EntregadorNegocio.inserir(EntregadorNegocio.java:33)
+	at ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest.lambda$listarPorParteDeNome$6(EntregadorNegocio_EntregadorDAO_IntegracaoTest.java:44)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+]]></failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        e1_0.codigo,
+        e1_0.cpf,
+        e1_0.rg,
+        e1_0.nome,
+        e1_0.telefone 
+    from
+        entregador e1_0 
+    where
+        upper(e1_0.cpf)=?
+]]></system-out>
+  </testcase>
+</testsuite>

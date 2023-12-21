@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------
+Test set: ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.432 s <<< FAILURE! -- in ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest
+ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest.exclusaoEntregador -- Time elapsed: 0.019 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: ifmt.cba.negocio.NegocioException: Ja existe esse entregador
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3164)
+	at ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest.exclusaoEntregador(EntregadorNegocio_EntregadorDAO_IntegracaoTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: ifmt.cba.negocio.NegocioException: Ja existe esse entregador
+	at ifmt.cba.negocio.EntregadorNegocio.inserir(EntregadorNegocio.java:33)
+	at ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest.lambda$exclusaoEntregador$10(EntregadorNegocio_EntregadorDAO_IntegracaoTest.java:64)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest.listarPorParteDeNome -- Time elapsed: 0 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: ifmt.cba.negocio.NegocioException: Ja existe esse entregador
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3164)
+	at ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest.listarPorParteDeNome(EntregadorNegocio_EntregadorDAO_IntegracaoTest.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: ifmt.cba.negocio.NegocioException: Ja existe esse entregador
+	at ifmt.cba.negocio.EntregadorNegocio.inserir(EntregadorNegocio.java:33)
+	at ifmt.cba.negocio.EntregadorNegocio_EntregadorDAO_IntegracaoTest.lambda$listarPorParteDeNome$6(EntregadorNegocio_EntregadorDAO_IntegracaoTest.java:44)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+

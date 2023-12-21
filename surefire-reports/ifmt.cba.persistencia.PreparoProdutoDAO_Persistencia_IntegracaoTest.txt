@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: ifmt.cba.persistencia.PreparoProdutoDAO_Persistencia_IntegracaoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.027 s <<< FAILURE! -- in ifmt.cba.persistencia.PreparoProdutoDAO_Persistencia_IntegracaoTest
+ifmt.cba.persistencia.PreparoProdutoDAO_Persistencia_IntegracaoTest.operacaoInclusaoPreparoProduto -- Time elapsed: 0.026 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: ifmt.cba.persistencia.PersistenciaException: Erro ao incluir class ifmt.cba.entity.PreparoProduto - not-null property references a null or transient value : ifmt.cba.entity.PreparoProduto.nome
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3164)
+	at ifmt.cba.persistencia.PreparoProdutoDAO_Persistencia_IntegracaoTest.operacaoInclusaoPreparoProduto(PreparoProdutoDAO_Persistencia_IntegracaoTest.java:38)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: ifmt.cba.persistencia.PersistenciaException: Erro ao incluir class ifmt.cba.entity.PreparoProduto - not-null property references a null or transient value : ifmt.cba.entity.PreparoProduto.nome
+	at ifmt.cba.persistencia.DAO.incluir(DAO.java:17)
+	at ifmt.cba.persistencia.PreparoProdutoDAO_Persistencia_IntegracaoTest.lambda$operacaoInclusaoPreparoProduto$1(PreparoProdutoDAO_Persistencia_IntegracaoTest.java:39)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
