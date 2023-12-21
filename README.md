@@ -37,7 +37,7 @@ dois no formato PDF e um no formato Zip. São eles:
 Obs: As entregas desses arquivos serão realizadas no ambiente AVA/Moodle em tarefas
 específicas para cada arquivo.
 
-* Data de Entrega: 15/12/2023.
+* Nova Data de Entrega: 29/12/2023.
 
 ## Critérios de Avaliação
 
@@ -45,4 +45,7 @@ específicas para cada arquivo.
 * Especificação de Casos de Testes - 2,0 pontos;
 * Implementação dos testes - 5,0 pontos;
 * Apresentação final - 2,0 pontos;
+* Responder Questionáro;
+
+
 
