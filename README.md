@@ -1,4 +1,4 @@
-# Test Automatizado de Software
+# Teste Automatizado de Software
 
 Este repositório tem como objetivo descrever e especificar o Estudo de Caso prático da
 disciplina de Testes Automatizados de Software do curso de Pós-Graduação Lato Sensu em
