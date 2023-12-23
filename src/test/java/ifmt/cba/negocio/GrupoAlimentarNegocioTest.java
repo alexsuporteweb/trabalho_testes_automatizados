@@ -8,8 +8,6 @@ import org.mockito.Mockito;
 
 import ifmt.cba.dto.GrupoAlimentarDTO;
 import ifmt.cba.entity.GrupoAlimentar;
-import ifmt.cba.negocio.GrupoAlimentarNegocio;
-import ifmt.cba.negocio.NegocioException;
 import ifmt.cba.persistencia.FabricaEntityManager;
 import ifmt.cba.persistencia.GrupoAlimentarDAO;
 import ifmt.cba.persistencia.ProdutoDAO;

@@ -16,7 +16,7 @@ public class AppInserirTipoPreparo {
             TipoPreparoNegocio tipoPreparoNegocio = new TipoPreparoNegocio(tipoPreparoDAO);
     
             TipoPreparoDTO tipoPreparoDTO = new TipoPreparoDTO();
-            tipoPreparoDTO.setDescricao("Cozimento em agua");
+            tipoPreparoDTO.setDescricao("assar por 25 minutos");
             tipoPreparoNegocio.inserir(tipoPreparoDTO);
 
         } catch (PersistenciaException | NegocioException e) {

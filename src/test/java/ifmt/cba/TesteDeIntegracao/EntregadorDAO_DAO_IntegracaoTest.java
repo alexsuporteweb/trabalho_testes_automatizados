@@ -1,9 +1,11 @@
-package ifmt.cba.persistencia;
+package ifmt.cba.TesteDeIntegracao;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import ifmt.cba.entity.Entregador;
+import ifmt.cba.persistencia.EntregadorDAO;
+import ifmt.cba.persistencia.FabricaEntityManager;
 
 public class EntregadorDAO_DAO_IntegracaoTest {
 

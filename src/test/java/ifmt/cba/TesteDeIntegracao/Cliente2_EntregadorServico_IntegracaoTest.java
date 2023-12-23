@@ -1,4 +1,4 @@
-package ifmt.cba.servico;
+package ifmt.cba.TesteDeIntegracao;
 
 
 
@@ -13,7 +13,7 @@ import io.restassured.response.Response;
 
 
 
-public class EntregadorServicoTest_IntegracaoTest {
+public class Cliente2_EntregadorServico_IntegracaoTest {
 
     @Test
     public void testeConsultarBuscarEntregadorPorCodigo() {

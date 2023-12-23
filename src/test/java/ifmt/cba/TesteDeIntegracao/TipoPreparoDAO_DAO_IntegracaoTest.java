@@ -1,4 +1,4 @@
-package ifmt.cba.persistencia;
+package ifmt.cba.TesteDeIntegracao;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -7,6 +7,8 @@ import java.util.List;
 
 
 import ifmt.cba.entity.TipoPreparo;
+import ifmt.cba.persistencia.FabricaEntityManager;
+import ifmt.cba.persistencia.TipoPreparoDAO;
 
 public class TipoPreparoDAO_DAO_IntegracaoTest {
 

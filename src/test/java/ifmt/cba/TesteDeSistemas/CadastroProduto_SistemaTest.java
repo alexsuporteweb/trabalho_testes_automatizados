@@ -1,4 +1,4 @@
-package ifmt.cba.sistemas;
+package ifmt.cba.TesteDeSistemas;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
@@ -15,7 +15,7 @@ import com.google.gson.Gson;
 public class CadastroProduto_SistemaTest {
    
     @Test // Teste da Use Store nº 01
-    @DisplayName("Teste a inclusão do Produto referente ao teste de sistema")
+    @DisplayName("Teste a inclusão do Produto referente ao teste de sistema - Use Storie 01")
     public void testInclusaoProduto() {
         
         Response Response = RestAssured.request(Method.GET, "http://localhost:8080/grupoalimentar/codigo/3");
@@ -23,10 +23,10 @@ public class CadastroProduto_SistemaTest {
         
         Gson gson = new Gson();
         GrupoAlimentarDTO grupoAlimentarDTO = gson.fromJson(Response.getBody().asString(), GrupoAlimentarDTO.class);
-
+        // Aqui é cadastrado um produto
         ProdutoDTO produtoDTO = new ProdutoDTO();
-        produtoDTO.setNome("Novo Produto para o Teste de Sistema - Carne");
-        produtoDTO.setCustoUnidade(10.0f);
+        produtoDTO.setNome("Carne de Porco Assada 07");
+        produtoDTO.setCustoUnidade(20);
         produtoDTO.setEstoque(30);
         produtoDTO.setEstoqueMinimo(500);
         produtoDTO.setValorEnergetico(100);
@@ -41,7 +41,10 @@ public class CadastroProduto_SistemaTest {
                 .post("http://localhost:8080/produto/")
             .then()
                 .log().all()
-                .statusCode(200)
-                .body("codigo", Matchers.is(Matchers.notNullValue()));
+                .statusCode(200) //Aqui confirma a inclusão do produto
+                //Aqui é confirmado alguns dados enviados do novo produto
+                .body("nome[0]", Matchers.is(produtoDTO.getNome()))
+                .body("estoque[0]", Matchers.is(produtoDTO.getEstoque()));
+              
     }
 }

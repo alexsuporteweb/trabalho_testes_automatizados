@@ -1,11 +1,11 @@
-package ifmt.cba.servico;
+package ifmt.cba.TesteDeIntegracao;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import io.restassured.RestAssured;
 
-public class EntregadorServico_APIServico_IntegracaoTest {
+public class Cliente_EntregadorServico_IntegracaoTest {
 
     @Test
     @DisplayName("Testa consulta a API de serviço buscar entregador por código")

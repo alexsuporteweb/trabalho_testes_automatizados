@@ -1,4 +1,4 @@
-package ifmt.cba.sistemas;
+package ifmt.cba.TesteDeSistemas;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
@@ -8,14 +8,11 @@ import io.restassured.RestAssured;
 
 public class CadastroTipoPreparo_SistemaTeste {
 
-    @Test // Teste da Use Store nº 03
-    @DisplayName("Teste a inclusão do Tipo Preparo referente ao teste de sistema")
+    @Test
+    @DisplayName("Teste a inclusão do TipoPreparo referente ao teste de sistema - Use Storie nº. 03")
     public void testInclusaoProduto() {
-              
-
         TipoPreparoDTO tipoPreparoDTO = new TipoPreparoDTO();
-        tipoPreparoDTO.setDescricao("Deixar assando por 25 minutos");
-
+        tipoPreparoDTO.setDescricao("Deixar assando por 66 minutos");
         RestAssured
             .given()
                 .log().all()
@@ -26,7 +23,7 @@ public class CadastroTipoPreparo_SistemaTeste {
             .then()
                 .log().all()
                 .statusCode(200)
-                .body("codigo", Matchers.is(Matchers.notNullValue()));
-    
+                .body("codigo", Matchers.is(Matchers.notNullValue()))
+                .body("descricao", Matchers.is(Matchers.notNullValue())); 
     }
 }

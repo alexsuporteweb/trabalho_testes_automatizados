@@ -1,11 +1,11 @@
-package ifmt.cba.servico;
+package ifmt.cba.TesteDeIntegracao;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import io.restassured.RestAssured;
 
-public class ClienteServico_APIServico_IntegracaoTest {
+public class Cliente_ClienteServico_IntegracaoTest {
 
     @Test
     @DisplayName("Testa consulta a API de serviço buscar cliente por código")
@@ -24,7 +24,7 @@ public class ClienteServico_APIServico_IntegracaoTest {
         RestAssured
         .given()
         .when()
-            .delete("http://localhost:8080/cliente/6")
+            .delete("http://localhost:8080/cliente/14")
         .then()
             .statusCode(200);
    }
