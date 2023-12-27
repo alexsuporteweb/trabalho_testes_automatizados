@@ -14,7 +14,8 @@ public class ExcluirTipoPreparo_SistemaTest {
     @Test
     @DisplayName("Este teste exclui o TipodePreparo, para que seja feita essa operação" +
                 "primeiro criamos um TipoPreparoProduto, após buscamos o código dele pelo " +
-                "nome e após fazemos a exclusão pelo código recuperado")
+                "nome e após fazemos a exclusão pelo código recuperado"+
+                "referente User Storie nº 03")
     public void testDeleteTipoPreparoPorCodigo(){
 
         //Aqui é feita a inclusão do TipoPreparo

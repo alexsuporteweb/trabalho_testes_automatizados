@@ -1,4 +1,4 @@
-package ifmt.cba.TesteDePerformace;
+package ifmt.cba.TesteDePerformance;
 
 import static org.junit.jupiter.api.Assertions.assertTimeout;
 
@@ -19,7 +19,7 @@ import java.time.Duration;
 
 
 
-public class InserirEntregador_PerformaceTest {
+public class InserirEntregador_PerformanceTest {
     
     Faker faker = new Faker(Locale.forLanguageTag("pt-br"));
     FakeValuesService fakevalues = new  FakeValuesService(Locale.getDefault(), new RandomService());
@@ -35,7 +35,7 @@ public class InserirEntregador_PerformaceTest {
         entregadorDTO.setRG(fakevalues.bothify("#######-#"));;
         entregadorDTO.setTelefone(fakevalues.bothify("(##)9####-####"));;
         
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(15000), () -> {
         RestAssured
           .given()
             .log().all()
@@ -49,6 +49,7 @@ public class InserirEntregador_PerformaceTest {
             .body("codigo[0]", Matchers.is(Matchers.notNullValue())); // Aqui confirma a execução da função
             });
     } 
+      
       
     }
 

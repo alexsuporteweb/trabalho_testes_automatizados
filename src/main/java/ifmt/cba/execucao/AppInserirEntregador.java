@@ -18,7 +18,7 @@ public class AppInserirEntregador {
 
         Faker faker = new Faker(Locale.forLanguageTag("pt-br"));
         FakeValuesService fakevalues = new  FakeValuesService(Locale.getDefault(), new RandomService()); 
-        for (int i = 0; i<=500000; i++)
+        for (int i = 0; i<=100000; i++)
         {
         try {
             EntregadorDAO entregadorDAO = new EntregadorDAO(

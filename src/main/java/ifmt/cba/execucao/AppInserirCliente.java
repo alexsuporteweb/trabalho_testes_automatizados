@@ -25,7 +25,7 @@ public class AppInserirCliente {
             PedidoDAO pedidoDAO = new PedidoDAO(FabricaEntityManager.getEntityManagerProducao());
             ClienteNegocio clienteNegocio = new ClienteNegocio(clienteDAO, pedidoDAO);
             
-            for (int i = 0; i<=100; i++)
+            for (int i = 0; i<=320000; i++)
         {
             ClienteDTO clienteDTO = new ClienteDTO();
             clienteDTO.setNome(faker.name().fullName());

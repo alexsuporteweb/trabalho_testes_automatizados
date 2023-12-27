@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.github.javafaker.Faker;
@@ -18,6 +19,10 @@ import io.restassured.response.Response;
 public class AlteracaoCliente_SistemaTest {
 
     @Test
+    @DisplayName("Teste a alteração de dados do cliente" +
+                " Para realizar este teste, criamos um cliente, fazemos a busca "+
+                "e após buscar seu código, é feita a alteração" +
+                "referente a User Story nº 05")
     public void alterarDadosCliente(){
     Faker faker = new Faker(Locale.forLanguageTag("pt-br"));
     FakeValuesService fakevalues = new FakeValuesService(Locale.getDefault(), new RandomService());

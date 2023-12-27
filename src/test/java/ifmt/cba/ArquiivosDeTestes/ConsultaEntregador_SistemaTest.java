@@ -1,4 +1,4 @@
-package ifmt.cba.TesteDeSistemas;
+package ifmt.cba.ArquiivosDeTestes;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
