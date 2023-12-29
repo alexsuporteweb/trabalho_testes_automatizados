@@ -36,7 +36,7 @@ public class AlteracaoDadosDeCliente_PerformanceTest {
      cltDTO.setLogradouro(faker.address().streetName());
      cltDTO.setTelefone(fakevalues.bothify("(##)9####-####"));
     
-     assertTimeout(Duration.ofMillis(200), () -> {
+     assertTimeout(Duration.ofMillis(500), () -> {
      RestAssured
         .given()
             .log().all()

@@ -124,4 +124,8 @@ public class GrupoAlimentarNegocio {
 		return this.modelMapper.map(grupoAlimentarDTO, GrupoAlimentar.class);
 	}
 
+	public Object buscarPorCodigo(int i) {
+		return null;
+	}
+
 }

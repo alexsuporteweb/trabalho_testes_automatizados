@@ -35,7 +35,7 @@ public class InserirEntregador_PerformanceTest {
         entregadorDTO.setRG(fakevalues.bothify("#######-#"));;
         entregadorDTO.setTelefone(fakevalues.bothify("(##)9####-####"));;
         
-        assertTimeout(Duration.ofMillis(15000), () -> {
+        assertTimeout(Duration.ofMillis(5000), () -> {
         RestAssured
           .given()
             .log().all()
